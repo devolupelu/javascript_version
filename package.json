@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "start": "node dist/app.js",
     "dev": "node src/app.js"
   },
   "keywords": [],
