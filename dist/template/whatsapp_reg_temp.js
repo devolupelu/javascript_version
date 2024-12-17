@@ -8,7 +8,7 @@ const generate_whatsapp_registration_mail = (firstName, lastName, email, phoneNu
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Confirmation</title>
+  <title>Registration Confirmation - ${firstName} ${lastName}</title>
   <style>
     /* Reset and basic styles */
     body {
@@ -128,8 +128,6 @@ const generate_whatsapp_registration_mail = (firstName, lastName, email, phoneNu
       .content p, .details-table th, .details-table td {
         font-size: 14px;
       }
-
-      
     }
   </style>
 </head>

@@ -21,8 +21,10 @@ const whatsapp_register = async (req, res) => {
             });
             return; // Exit the function after sending the response
         }
-        // Check if registration already exists
-        const existingRegistration = await whatsapp_registration_1.default.findOne({ Email });
+        // Check if a registration with the same email or name already exists
+        const existingRegistration = await whatsapp_registration_1.default.findOne({
+            $or: [{ Email }, { firstName, lastName }],
+        });
         if (existingRegistration) {
             res.status(400).json({
                 message: "A registration with this email already exists.",
